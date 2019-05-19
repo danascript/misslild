@@ -1,0 +1,446 @@
+/* 
+font-family: 'Josefin Slab', serif;
+font-family: 'Rokkitt', serif;
+ */
+
+/*         */
+/* GENERAL */
+/*         */
+
+body {
+  font-family: 'Rokkitt', serif;
+  background-image: url(images/background_2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body:after {
+  content: "";
+  position: fixed; /* stretch a fixed position to the whole screen */
+  top: 0;
+  height: 100vh; /* fix for mobile browser address bar appearing disappearing */
+  left: 0;
+  right: 0;
+  z-index: -1; /* needed to keep in the background */
+  background: url(images/background_2.jpg) center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+p {
+  /* font-size: 0.85rem; */
+  font-family: 'Josefin Slab', serif;
+}
+
+h4 {
+  text-transform: uppercase;
+  padding-bottom: 1.8rem;
+  padding-top: 1.4rem;
+  font-size: 1.4rem;
+  font-family: 'Josefin Slab', serif;
+}
+
+.subsection {
+  padding-bottom: 2.5rem;
+  margin: 0 auto;
+}
+
+.subheader {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+.subheader h4 {
+  padding-bottom: 0;
+}
+
+/*        */
+/* NAVBAR */
+/*        */
+
+.df--navigation  {
+  font-family: 'Josefin Slab', serif;
+  background-color: white;
+}
+
+.navbar-light .navbar-brand {
+  color: #183732;
+}
+.nav-item {
+  margin-left: 0.6rem;
+  color: #183732;
+}
+.nav-item .nav-link {
+  color: #183732;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler i {
+  color: #183732;
+}
+
+/*           */
+/* JUMBOTRON */
+/*           */
+
+.df--main-jumbotron {
+  color: #ffffff;
+  text-shadow: 1px 1px 5px #183732;
+  font-family: 'Josefin Slab', serif;
+  background-color: transparent;
+}
+
+/*       */
+/* ABOUT */
+/*       */
+
+.df--about {
+  background-color: #EFEFEF;
+}
+
+.df--about .progress {
+  height: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.df--about .progress-bar {
+  background-color: #FFD449;
+}
+
+.df--about .subsection h4{
+  font-size: 1.2rem;
+}
+
+/*          */
+/* SERVICES */
+/*          */
+
+.df--services {
+  background-color: #FFD449;
+  text-align: justify;
+}
+
+.df--services .row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.service-item {
+    padding-top: 3.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.service-item h4 {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: 1.2rem;
+}
+
+.service-item i {
+  color: #183732;
+}
+
+/*        */
+/* QUOTES */
+/*        */
+
+.df--quotes,
+.df--quotes .container-fluid { 
+  padding: 0;
+}
+
+.carousel-item {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* color: $main-bg-color; */
+  height: 280px;
+}
+
+.df--quotes li {
+  margin-top: 1rem;
+}
+
+.df--quotes h5 {
+  font-size: 1.1rem;
+}
+
+.df--quotes span {
+  text-transform: uppercase;
+  line-height: 3.5rem;
+}
+
+.df--quotes i {
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+/*           */
+/* PORTFOLIO */
+/*           */
+
+.df--portfolio {
+  background-color: #FAFAFA;
+}
+
+.portfolio-item {
+  margin-top: 1.875rem;
+}
+
+
+/*        */
+/* RESUME */
+/*        */
+
+.df--resume .container-fluid{
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0 0 2rem 0;
+}
+.df--resume .section {
+  color: #EEEEEE;
+}
+
+.width {
+  width: 70%;
+}
+
+.resume-item {
+  padding: 1rem;
+  min-height: 200px;
+  text-align: left;
+}
+
+.resume-item h6 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  font-family: 'Rokkitt', serif;
+}
+
+.resume-item h6,
+.resume-item p {
+  padding-left: 2rem;
+}
+
+/*        */
+/* FOOTER */
+/*        */
+
+footer {
+  padding: 1rem;
+  background-color: #EEEEEE;
+}
+
+footer a {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #FFD449;
+}
+footer a:hover,
+footer a:focus {
+  text-decoration: none;
+  color: #FFD449;
+}
+
+footer .fa {
+  font-size: 1.5rem;
+}
+
+footer .fa:hover {
+  text-shadow: 2px 2px 7px grey;
+  color: #183732;
+}
+
+
+/* Animation classes */
+
+.hoverIt {
+  box-shadow: 1px 1px 5px #183732;
+  z-index: 2;
+  transition: all 200ms ease;
+  transform: scale(1.05);
+}
+
+.progress-animate {
+  -webkit-transition: width 2s ease-in-out;
+  -moz-transition: width 2s ease-in-out;
+  -o-transition: width 2s ease-in-out;
+  transition: width 2s ease-in-out;
+}
+
+.scrolled nav {
+  background-color: #EEEEEE;
+  text-shadow: 0 0 3px #ddd;
+}
+
+.pre-figure span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  color: #183732;
+  font-size: 1rem;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  text-shadow: 1px 1px 3px grey;
+}
+
+figure:hover + span {
+  bottom: -18px;
+  opacity: 1;
+}
+
+
+/*
+ * Device = Most of the Smartphones Mobiles (Portrait)
+ *
+ */
+
+@media (min-width: 1px) and (max-width: 768px) {
+  body {
+    background-image: url(/../images/bg2.jpg);
+    background-attachment: fixed;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  body:after {
+    content: "";
+    position: fixed; /* stretch a fixed position to the whole screen */
+    top: 0;
+    height: 100vh; /* fix for mobile browser address bar appearing disappearing */
+    left: 0;
+    right: 0;
+    z-index: -1; /* needed to keep in the background */
+    background: url(/../images/bg2.jpg) center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  #home {
+      background-color: rgba(255, 255, 255, 0.479);
+      border-radius: 10px;
+      padding: 0.5rem;
+    }
+
+  .pre-figure span {
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    color: rgb(28, 86, 16);
+    font-size: 1rem;
+    text-decoration: none;
+    opacity: 1;
+    text-shadow: 1px 1px 3px grey;
+  }
+
+  nav,
+  .navbar {
+    /* background-color: $nav-bg-scroll; */
+  }
+
+  /* .main {
+    padding: 0;
+    margin-top: -75px; */
+
+    .df--main-jumbotron {
+      padding-top: 70%;
+      left: 5%;
+      text-shadow: 1px 1px 5px white;
+    }
+  /* } */
+
+  .resume-section {
+    /* .width {
+      width: 100%;
+    } */
+  }
+
+}
+
+@media (min-width: 1px) and (orientation: landscape) {
+  /* .main {
+    padding: 0;
+    margin-top: -75px; */
+
+    .df--main-jumbotron {
+      padding-top: 40%;
+      left: 5%;
+      text-shadow: 1px 1px 5px white;
+    }
+
+}
+
+@media (min-width: 768px) {
+  /* .main {
+    padding: 0;
+    margin-top: -75px; */
+
+    .df--main-jumbotron {
+      padding-top: 50%;
+      left: 5%;
+      text-shadow: 1px 1px 5px white;
+    }
+  /* } */
+}
+
+@media (min-width: 768px) and (orientation: landscape) {
+  /* .main {
+    padding: 0;
+    margin-top: -75px; */
+
+    df--main-jumbotron {
+      padding-top: 60%;
+      left: 5%;
+      text-shadow: 1px 1px 5px white;
+    }
+  /* } */
+}
+
+@media (min-width: 1025px) {
+  /* .main {
+    padding: 0;
+    margin-top: -75px; */
+
+    .df--main-jumbotron {
+      padding-top: 45%;
+      left: 5%;
+      text-shadow: 1px 1px 5px white;
+    }
+  /* } */
+
+  .pre-figure figure img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+
+  .pre-figure figure:hover img,
+  .pre-figure figure img:focus {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+}
