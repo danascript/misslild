@@ -7,12 +7,15 @@
     <title>misslild</title>
 
     <link href="style.css" rel="stylesheet">
+    <link href="progress-circle.css" rel="stylesheet">
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Rokkitt:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kodchasan:200,600&display=swap"" rel="stylesheet">
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    
 
     <!-- COOKIE -->
     <!-- <script>
@@ -45,15 +48,15 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="#about" class="nav-link">About</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a href="#portfolio" class="nav-link">Portfolio</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="#resume" class="nav-link">Resume</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
@@ -64,9 +67,27 @@
 
     <!-- JUMBOTRON -->
     
-    <div id="home" class="df--main-jumbotron container-fluid">
+    <div id="home" class="container-fluid">
+        <div class="df--home container d-flex justify-content-around row">
+            <div class="df--home--about col-12 col-md-6 order-last order-lg-0">
+                <div class="df--home--about--title p-2">
+                    <h2>Daniela Fedyakin</h2>
+                    <h3>Full-stack Web Developer</h3>
+                </div>
+                <p class="p-2">
+                    Hi! I'm Daniela, a full-stack web developer based in Berlin, Germany. I am very passionate about my job, and hope one day to make a change with the skills that I have. I'm a team player who is also a former Architect, so attention to details and organisational skills are my second name.
+                </p>
+                    
+                <p class="p-2">
+                    My daily tech stack mainly consists of MongoDB, Express.js, VueJS, and Node.js (MEVN), but you can scroll down to check which other technologies I'm familiar with! To keep in touch or contact me - check out my social media accounts, where I'm most active and would love to have a chat!
+                </p>
+            </div>
+            <div class="col-9 col-md-5 order-sm-0">
+                <img class="img-fluid img-thumbnail" src="images/me.jpg" alt="">
+            </div>
+        </div>
         <!-- <div class="row main"> -->
-            <div class="col-md-12">
+            <!-- <div class="col-md-12">
                 
                 <h1 class="display-4">
                     Daniela Fedyakin
@@ -75,54 +96,119 @@
                     Full-stack Web Developer
                 </h3>
             
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
+        
     </div>
 
     <!--  ABOUT -->
 
-    <div class="df--about">
-        <div id="about" class="container-fluid section">
+    <div class="df--tech">
+        <div id="tech" class="container-fluid section">
             <div class="subheader">
-            <h4>About Me</h4>
+            <h4>my tech</h4>
             <p>
                 The best way to learn and to grow is by getting out of your comfort zone.
             </p>
             </div>
+        </div>
+        <div class="row justify-content-between subsection">
+
+            <div class="col-md-2 col-sm-4 col-6 text-center">
+                <div class="df--tech--progress">
+                    <div data-percentage="85" class="progress-circle progress-0">
+                        <span>Javascript</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-6 text-center">
+                <div class="df--tech--progress">
+                    <div data-percentage="90" class="progress-circle progress-0">
+                        <span>Vue.js</span>
+                    </div>  
+                </div>  
+            </div>  
+           
+            <div class="col-md-2 col-sm-4 col-6 text-center">
+                <div class="df--tech--progress">
+                    <div data-percentage="55" class="progress-circle progress-0">
+                        <span>React.js</span>
+                    </div>  
+                </div>  
+            </div>  
+            
+            <div class="col-md-2 col-sm-4 col-6 text-center">
+                <div class="df--tech--progress">
+                    <div data-percentage="60" class="progress-circle progress-0">
+                        <span>Node.js</span>
+                    </div>  
+                </div>  
+            </div>
+
+            <div class="col-md-2 col-sm-4 col-6 text-center">
+                <div class="df--tech--progress">
+                    <div data-percentage="70" class="progress-circle progress-0">
+                        <span>Express</span>
+                    </div>  
+                </div>  
+            </div>  
+
+            <div class="col-md-2 col-sm-4 col-6 text-center">
+                <div class="df--tech--progress">
+                    <div data-percentage="65" class="progress-circle progress-0">
+                        <span>MongoDb</span>
+                    </div>  
+                </div>  
+            </div>  
 
         </div>
-        <div class="row justify-content-around subsection">
-            <div class="col-md-5 col-12 text-justify">
-                <h4>My Story</h4>
+    </div>
+
+        <!-- PORTFOLIO -->
+
+    <div class="df--portfolio">
+        <div id="portfolio" class="container-fluid section">
+            <div class="subheader">
+                <h4>My portfolio</h4>
                 <p>
-                    Hi! I'm Daniela, originally from Israel, spent my adolescence in Ukraine and currently based in Berlin where I'm taking my first steps in Web Development. I am very passionate about my job, and hope one day to make a change with the skills that I have. I'm a team player who is also a former Architect, so attention to details and organisational skills are my second name. I enjoy volunteering as a tutor in two schools where I teach JavaScript. When I'm not doing any of the mentioned above, you can find me taking care of animals.
+                    Latest projects created with HTML, CSS(SCSS), Bootstrap 4, jQuery, JavaScript(ES6), NodeJS, MongoDB and more. 
                 </p>
             </div>
-            <div class="col-md-5 col-12">
-                <h4>My Skills</h4>
-
-                <p>HTML &amp; CSS</p>
-                <div class="progress">
-                    <div class="progress-bar" role='progressbar' aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"  style="width: 0%;"></div>
+            <div class="row subsection d-flex justify-content-between">
+                <div class="col-lg-3 col-12 col-md-6 text-center pre-figure">
+                    <a href="https://codepen.io/misslild/pen/wmadQX" target="_blank" rel="noopener">
+                        <figure>
+                            <img src="images/1.jpg" alt="Pomodoro clock" class="img-fluid portfolio-item">
+                        </figure>
+                        <span>Pomodoro clock</span>
+                    </a>
                 </div>
-                
-                <p>Vue.js</p>
-                <div class="progress">
-                    <div class="progress-bar" role='progressbar' aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"  style="width: 0%;"></div>
+                <div class="col-lg-3 col-12 col-md-6 text-center pre-figure">
+                    <a href="https://codepen.io/misslild/pen/qxpxYN" target="_blank" rel="noopener">
+                        <figure>
+                            <img src="images/2.jpg" alt="Calculator JS" class="img-fluid portfolio-item">
+                        </figure>
+                        <span>Calculator JS</span>
+                    </a>
                 </div>
-
-                <p>React.js</p>
-                <div class="progress">
-                    <div class="progress-bar" role='progressbar' aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"  style="width: 0%;"></div>
+                <div class="col-lg-3 col-12 col-md-6 text-center pre-figure">
+                    <a href="https://codepen.io/misslild/pen/rdJXMo" target="_blank" rel="noopener">
+                        <figure>
+                            <img src="images/4.jpg" alt="Tic Tac Toe" class="img-fluid portfolio-item">
+                        </figure>
+                        <span>Tic Tac Toe</span>
+                    </a>
                 </div>
-                
-                <p>Javascript &amp; Node.js</p>
-                <div class="progress">
-                    <div class="progress-bar" role='progressbar' aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"  style="width: 0%;"></div>
+                <div class="col-lg-3 col-12 col-md-6 text-center pre-figure">
+                    <a href="https://codepen.io/misslild/pen/mqoPQL" target="_blank" rel="noopener">
+                        <figure>
+                            <img src="images/3.jpg" alt="XKCD Comics" class="img-fluid portfolio-item">
+                        </figure>
+                        <span>XKCD Comics</span>
+                    </a>
                 </div>
-
             </div>
-
         </div>
     </div>
 
@@ -131,155 +217,36 @@
     <div class="df--services">
         <div id="service" class="container-fluid section">
             <div class="subheader">
-                <h4>My Services</h4>
-                <p>Below you can find a list of the fields I specialise in.</p>
+                <h4>My concept</h4>
+                <p>The core concept of my vision and work.</p>
             </div>
         </div>
 
         <div class="row justify-content-center subsection">
-            <div class="service-item col-12 col-sm-6 col-lg-4">
-                <i class="fa fa-terminal fa-2x" aria-hidden="true"></i>
-                <br />
-                <h4>Development</h4>
+            <div class="service-item text-center mb-5 col-12 col-sm-4">
+                <i class="fas fa-drafting-compass fa-2x" aria-hidden="true"></i>
                 <p>
-                    Developing your project in accordance to the newest technologies with the most optimised solutions for your business.
+                    Tailored approach
                 </p>
             </div>
-            <div class="service-item col-12 col-sm-6 col-lg-4">
-                <i class="fa fa-desktop fa-2x" aria-hidden="true"></i>
-                <br />
-                <h4>Custom Layout</h4>
+            <div class="service-item text-center mb-5 col-12 col-sm-4">
+                <i class="fas fa-laptop-code fa-2x" aria-hidden="true"></i>
                 <p>
-                    I will design a layout according to the needs of your business with a call to action for your clients.
+                    Quality services 
                 </p>
             </div>
-            <div class="service-item col-12 col-sm-6 col-lg-4">
-                <i class="fa fa-area-chart fa-2x" aria-hidden="true"></i>
-                <br />
-                <h4>SEO</h4>
+            <div class="service-item text-center mb-5 col-12 col-sm-4">
+                <i class="fas fa-seedling fa-2x" aria-hidden="true"></i>
                 <p>
-                    Search Engine Optimisation - the magic words that will ensure the strongest online presence possible.
+                    Results that matter
                 </p>
-            </div>
-            <div class="service-item col-12 col-sm-6 col-lg-4">
-                <i class="fa fa-paint-brush fa-2x" aria-hidden="true"></i>
-                <br />
-                <h4>Design</h4>
-                <p>
-                    Your project will have a personalised design which will create the best client experience that benefits your business.
-                </p>
-            </div>
-            <div class="service-item col-12 col-sm-6 col-lg-4">
-                <i class="fa fa-terminal fa-2x" aria-hidden="true"></i>
-                <br />
-                <h4>Mobile first</h4>
-                <p>
-                    Mobile devices are everything today. I will bring your businees to as many people as possible and to every existing device.
-                </p>
-            </div>
-            <div class="service-item col-12 col-sm-6 col-lg-4">
-                <i class="fa fa-wrench fa-2x" aria-hidden="true"></i>
-                <br />
-                <h4>Maintenance</h4>
-                <p>
-                    The code and layouts are maintainable, making it easy for you to be in control of your project.
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- QUOTES CAROUSEL -->
-
-    <div class="df--quotes">
-        <div class="container-fluid section">
-            <div id="carousel-generic" class="carousel slide d-flex align-items-center" data-ride="carousel">
-                <ol class="carousel-indicators" aria-hidden="true">
-                    <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-generic" data-slide-to="2"></li>
-                </ol>
-
-                <div class="carousel-inner">
-                    <div class="carousel-item text-center">
-                        <i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>
-                        <h5 class="text-center">
-                            I always like to look on the optimistic side of life, but I am realistic enough to know that life is a complex matter.
-                        </h5> 
-                        <br />
-                        <span> — Walt Disney</span>
-                    </div>
-                    <div class="carousel-item active text-center">
-                        <i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>
-                        <h5 class="text-center">
-                            However difficult life may seem, there is always something you can do and succeed at.
-                        </h5> 
-                        <br />
-                        <span> — Stephen Hawking</span>
-                    </div>
-                    <div class="carousel-item text-center">
-                        <i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>
-                        <h5 class="text-center">
-                            I enjoy life when things are happening. I don’t care if it’s good things or bad things. That means you’re alive.
-                        </h5> 
-                        <br />
-                        <span> — Joan Rivers</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- PORTFOLIO -->
-
-    <div class="df--portfolio">
-        <div id="portfolio" class="container-fluid section">
-            <div class="subheader">
-                <h4>My Portfolio</h4>
-                <p>
-                    Latest projects created with HTML, CSS(SCSS), Bootstrap 4, jQuery, JavaScript(ES6), NodeJS, MongoDB and more. 
-                </p>
-            </div>
-            <div class="row subsection">
-                <div class="offset-lg-3 col-lg-3 col-12 col-sm-6 text-center pre-figure">
-                    <a href="https://misslild.github.io/WesBos-30day-Coding-challenge" target="_blank" rel="noopener">
-                        <figure>
-                            <img src="images/portfolio1-compressed.jpg" alt="30 days VanillaJS challenge" class="img-fluid portfolio-item">
-                        </figure>
-                        <span>30 Days JavaScript Challenge</span>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-12 col-sm-6 text-center pre-figure">
-                    <a href="https://misslild.github.io/marvel_api_search" target="_blank" rel="noopener">
-                        <figure>
-                            <img src="images/portfolio2-compressed.jpg" alt="Marvel API project" class="img-fluid portfolio-item">
-                        </figure>
-                        <span>Marvel API search</span>
-                    </a>
-                </div>
-                <div class="offset-lg-3  col-lg-3 col-12 col-sm-6 text-center pre-figure">
-                    <a href="https://codepen.io/misslild/full/qxpxYN/" target="_blank" rel="noopener">
-                        <figure>
-                            <img src="images/portfolio4-compressed.jpg" alt="JavaScript Calculator" class="img-fluid portfolio-item">
-                        </figure>
-                        <span>JavaScript Calculator</span>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-12 col-sm-6 text-center pre-figure">
-                    <a href="https://codepen.io/misslild/full/WdbzpG" target="_blank" rel="noopener">
-                        <figure>
-                            <img src="images/portfolio5-compressed.jpg" alt="Weather API project" class="img-fluid portfolio-item">
-                        </figure>
-                        <span>Weather API</span>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
 
     <!-- RESUME -->
 
-    <div class="df--resume">
+    <!-- <div class="df--resume">
         <div id="resume" class="container-fluid section">
             <div class="subheader">
                 <h4>My Resume</h4>
@@ -374,13 +341,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- FOOTER -->
 
-    <footer class="container-fluid">
+    <footer id="contact" class="container-fluid">
         <div class="row d-flex justify-content-center">
-            <div class="icon col-2 col-md-2 col-lg-1 text-center">
+            <div class="icon p-2 col-2 col-md-2 text-center">
                 <a href="https://github.com/misslild" target="_blank" rel="noopener">
                     <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
@@ -388,7 +355,7 @@
                     Link to my Github account
                 </span>
             </div>
-            <div class="icon col-2 col-md-2 col-lg-1 text-center">
+            <div class="icon p-2 col-2 col-md-2 text-center">
                 <a href="https://codepen.io/misslild" target="_blank" rel="noopener">
                     <i class="fab fa-codepen" aria-hidden="true"></i>
                 </a>
@@ -396,7 +363,7 @@
                     Link to my CodePen account
                 </span>
             </div>
-            <div class="icon col-2 col-md-2 col-lg-1 text-center">
+            <div class="icon p-2 col-2 col-md-2 text-center">
                 <a href="https://www.linkedin.com/in/daniela-fedyakin" target="_blank" rel="noopener">
                     <i class="fab fa-linkedin" aria-hidden="true"></i>
                 </a>
@@ -404,7 +371,7 @@
                     Link to my LinkedIn account
                 </span>
             </div>
-            <div class="icon col-2 col-md-2 col-lg-1 text-center">
+            <div class="icon p-2 col-2 col-md-2 text-center">
                 <a href="https://twitter.com/codingmisslild" target="_blank" rel="noopener">
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
@@ -412,7 +379,7 @@
                     Link to my Twitter account
                 </span>
             </div>
-            <div class="icon col-2 col-md-2 col-lg-1 text-center">
+            <div class="icon p-2 col-2 col-md-2 text-center">
                 <a href="https://www.instagram.com/coding.misslild" target="_blank" rel="noopener">
                     <i class="fab fa-instagram" aria-hidden="true"></i>
                 </a>

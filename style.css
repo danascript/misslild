@@ -7,9 +7,15 @@ font-family: 'Rokkitt', serif;
 /* GENERAL */
 /*         */
 
+* {
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 200;
+ }
+
 body {
-  font-family: 'Rokkitt', serif;
-  background-image: url(images/background_2.jpg);
+  font-family: 'Kodchasan', sans-serif;
+  font-weight: 200;
+  background-image: url(images/background_4.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -22,7 +28,7 @@ body:after {
   left: 0;
   right: 0;
   z-index: -1; /* needed to keep in the background */
-  background: url(images/background_2.jpg) center center;
+  background: url(images/background_4.jpg) center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -31,7 +37,7 @@ body:after {
 
 p {
   /* font-size: 0.85rem; */
-  font-family: 'Josefin Slab', serif;
+  /* font-family: 'Josefin Slab', serif; */
 }
 
 h4 {
@@ -39,7 +45,7 @@ h4 {
   padding-bottom: 1.8rem;
   padding-top: 1.4rem;
   font-size: 1.4rem;
-  font-family: 'Josefin Slab', serif;
+  /* font-family: 'Josefin Slab', serif; */
 }
 
 .subsection {
@@ -62,19 +68,19 @@ h4 {
 /*        */
 
 .df--navigation  {
-  font-family: 'Josefin Slab', serif;
+  /* font-family: 'Josefin Slab', serif; */
   background-color: white;
 }
 
 .navbar-light .navbar-brand {
-  color: #183732;
+  color: #373737;
 }
 .nav-item {
   margin-left: 0.6rem;
-  color: #183732;
+  color: #373737;
 }
 .nav-item .nav-link {
-  color: #183732;
+  color: #373737;
 }
 
 .navbar-toggler {
@@ -82,7 +88,7 @@ h4 {
 }
 
 .navbar-toggler i {
-  color: #183732;
+  color: #373737;
 }
 
 /*           */
@@ -91,30 +97,45 @@ h4 {
 
 .df--main-jumbotron {
   color: #ffffff;
-  text-shadow: 1px 1px 5px #183732;
-  font-family: 'Josefin Slab', serif;
+  text-shadow: 1px 1px 5px #373737;
+  /* font-family: 'Josefin Slab', serif; */
   background-color: transparent;
 }
 
+.df--home {
+  padding-top: 15%;
+  padding-bottom: 10%;
+}
+
+.df--home.row {
+  margin: 0 auto;
+}
+
+.df--home img{
+  margin-bottom: 1rem;
+}
+
+.df--home .df--home--about {
+  background-color: rgba(255,255,255,0.5);
+  border: 5px solid white;
+  color: #41474e;
+  font-size: 1.3rem;
+}
+
+.df--home--about--title {
+  
+}
 /*       */
 /* ABOUT */
 /*       */
 
-.df--about {
-  background-color: #EFEFEF;
+.df--tech {
+  background-color: rgba(243, 243, 243, 0.53);;
 }
 
-.df--about .progress {
-  height: 0.2rem;
-  margin-bottom: 0.3rem;
-}
-
-.df--about .progress-bar {
-  background-color: #FFD449;
-}
-
-.df--about .subsection h4{
-  font-size: 1.2rem;
+.df--tech .row {
+  width: 80%;
+  margin: 0 auto;
 }
 
 /*          */
@@ -122,61 +143,13 @@ h4 {
 /*          */
 
 .df--services {
-  background-color: #FFD449;
+  background-color: rgba(243, 243, 243, 0.53);
   text-align: justify;
 }
 
-.df--services .row {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.service-item {
-    padding-top: 3.5rem;
-    padding-bottom: 2.5rem;
-}
-
-.service-item h4 {
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  font-size: 1.2rem;
-}
-
 .service-item i {
-  color: #183732;
-}
-
-/*        */
-/* QUOTES */
-/*        */
-
-.df--quotes,
-.df--quotes .container-fluid { 
-  padding: 0;
-}
-
-.carousel-item {
-  background-color: rgba(0, 0, 0, 0.5);
-  /* color: $main-bg-color; */
-  height: 280px;
-}
-
-.df--quotes li {
-  margin-top: 1rem;
-}
-
-.df--quotes h5 {
-  font-size: 1.1rem;
-}
-
-.df--quotes span {
-  text-transform: uppercase;
-  line-height: 3.5rem;
-}
-
-.df--quotes i {
-  margin-bottom: 2rem;
-  padding-top: 2rem;
+  color: #373737;
+  margin-bottom: 1rem;
 }
 
 /*           */
@@ -184,11 +157,23 @@ h4 {
 /*           */
 
 .df--portfolio {
-  background-color: #FAFAFA;
+  /* background-color: #c7586fb0; */
+  background-color: rgba(224, 179, 94, 0.7);
+  color: white;
+}
+
+.df--portfolio .row {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.df--portfolio img {
+  max-width: 200px;
+  height: auto;
 }
 
 .portfolio-item {
-  margin-top: 1.875rem;
+  margin-top: 2.5rem;
 }
 
 
@@ -230,19 +215,20 @@ h4 {
 /*        */
 
 footer {
-  padding: 1rem;
-  background-color: #EEEEEE;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #FAFAFA;
 }
 
 footer a {
   text-transform: uppercase;
   font-size: 1.5rem;
-  color: #FFD449;
+  color: #373737;
 }
 footer a:hover,
 footer a:focus {
   text-decoration: none;
-  color: #FFD449;
+  color: #FFE899;
 }
 
 footer .fa {
@@ -250,25 +236,18 @@ footer .fa {
 }
 
 footer .fa:hover {
-  text-shadow: 2px 2px 7px grey;
-  color: #183732;
+  text-shadow: 2px 2px 7px FFFFFF;
+  color: #373737;
 }
 
 
 /* Animation classes */
 
 .hoverIt {
-  box-shadow: 1px 1px 5px #183732;
+  /* box-shadow: 1px 1px 5px #373737; */
   z-index: 2;
   transition: all 200ms ease;
   transform: scale(1.05);
-}
-
-.progress-animate {
-  -webkit-transition: width 2s ease-in-out;
-  -moz-transition: width 2s ease-in-out;
-  -o-transition: width 2s ease-in-out;
-  transition: width 2s ease-in-out;
 }
 
 .scrolled nav {
@@ -285,8 +264,8 @@ footer .fa:hover {
   width: 100%;
   margin: 0 auto;
   padding: 0;
-  color: #183732;
-  font-size: 1rem;
+  color: white;
+  font-size: 1.3rem;
   text-decoration: none;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
@@ -294,8 +273,12 @@ footer .fa:hover {
   text-shadow: 1px 1px 3px grey;
 }
 
+.pre-figure img {
+  border-radius: 40px;
+}
+
 figure:hover + span {
-  bottom: -18px;
+  bottom: -25px;
   opacity: 1;
 }
 
@@ -307,7 +290,7 @@ figure:hover + span {
 
 @media (min-width: 1px) and (max-width: 768px) {
   body {
-    background-image: url(/../images/bg2.jpg);
+    background-image: url(images/background_4.jpg);
     background-attachment: fixed;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -327,7 +310,7 @@ figure:hover + span {
     left: 0;
     right: 0;
     z-index: -1; /* needed to keep in the background */
-    background: url(/../images/bg2.jpg) center center;
+    background: url(images/background_4.jpg) center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -335,7 +318,7 @@ figure:hover + span {
   }
 
   #home {
-      background-color: rgba(255, 255, 255, 0.479);
+      /* background-color: rgba(255, 255, 255, 0.479); */
       border-radius: 10px;
       padding: 0.5rem;
     }
@@ -349,7 +332,7 @@ figure:hover + span {
     width: 100%;
     margin: 0 auto;
     padding: 0;
-    color: rgb(28, 86, 16);
+    color: white;
     font-size: 1rem;
     text-decoration: none;
     opacity: 1;
@@ -432,15 +415,10 @@ figure:hover + span {
   /* } */
 
   .pre-figure figure img {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    /* -webkit-filter: blur(100%);
+    filter: blur(100%); */
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
 
-  .pre-figure figure:hover img,
-  .pre-figure figure img:focus {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-  }
 }

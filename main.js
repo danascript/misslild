@@ -17,12 +17,26 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-$(window).on('resize scroll', function() {
-  $('.progress').each(function() {
+$(window).on('resize scroll', function () {
+  $('.df--tech--progress').each(function() {
     if ($(this).isInViewport()) {
-      var bar = $(this).find('.progress-bar');
-      bar.addClass('progress-animate');
-      bar.css('width', bar.attr('aria-valuenow') + '%');
+      const bar = $(this).find('.progress-circle');
+      
+      let current = 0;
+      const percentage = bar.attr('data-percentage') 
+
+      const increment = () => {
+        if (current >= percentage) {
+          clearInterval(interval)
+          return;
+        }
+
+        bar.removeClass(`progress-${current}`);
+        current++;
+        bar.addClass(`progress-${current}`)
+      }
+
+      const interval = setInterval(increment, 10);
     }
   });
 });
