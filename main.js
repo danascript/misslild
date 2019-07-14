@@ -126,7 +126,23 @@ $.fn.isInViewport = function() {
   return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+$(document).ready(function() {
+  if (window.innerWidth < 700) {
+    createCircles();
+    animateCircles();
+    $('.animate--first').addClass('animate--first__transform');
+
+    $('.animate--second').addClass('animate--second__transform');
+  }
+})
+
 $(window).on('resize scroll', function () {
+  if (window.innerWidth < 700) {  
+    $('.animate--first').addClass('animate--first__transform');
+
+    $('.animate--second').addClass('animate--second__transform');
+  }
+
   $('#circle').each(function() {
     if ($(this).isInViewport()) {        
       animateCircles();

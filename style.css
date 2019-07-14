@@ -312,6 +312,28 @@ h6:hover {
   .card-columns {
     column-count: 1;
   } 
+
+  .animate--first {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .animate--first__transform {
+    opacity: 1;
+    transform: translateX(0rem);
+    transition: all 1s ease-in-out;
+  }
+
+  .animate--second {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+
+  .animate--second__transform {
+    opacity: 1;
+    transform: translateX(0rem);
+    transition: all 1s ease-in-out;
+  }
 }
 
 
