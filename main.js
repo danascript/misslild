@@ -1,14 +1,123 @@
+// This is the data for the tech stack section
+const techProgress = [
+  {
+    name: 'JavaScript',
+    progress: '80',
+    number: '75'
+  },
+  {
+    name: 'ES6',
+    progress: '90',
+    number: '85'
+  },
+  {
+    name: 'VueJS',
+    progress: '95',
+    number: '95'
+  },
+  {
+    name: 'ReactJS',
+    progress: '70',
+    number: '60'
+  },
+  {
+    name: 'NodeJS',
+    progress: '70',
+    number: '60'
+  },
+  {
+    name: 'Express',
+    progress: '65',
+    number: '55'
+  },
+  {
+    name: 'MongoDB',
+    progress: '80',
+    number: '75'
+  },
+  {
+    name: 'Mongoose',
+    progress: '75',
+    number: '70'
+  },
+]
 
-$('.carousel').carousel({
-  interval: 2500
-});
+const menuIds = $('a.nav-link')
+// This is to form the circle progress in the same section
+const createCircles = () => {
+  const circleDimensions = 100; // for height and width!
+  const strokeWidth = 4;
 
-$(".portfolio-item").hover(function () {
-    $(this).toggleClass("hoverIt");
- });
+  const radius = (circleDimensions / 2) - (strokeWidth /2 )
+  const circumference = 2 * Math.PI * radius
+
+  techProgress.forEach(circle => {
+    let parent = document.querySelector(`.${circle.name.toLowerCase()}`);    
+    let div = document.createElement("div");
+    let frag = document.createDocumentFragment();
+    let markup = 
+      `<svg 
+        width="${circleDimensions}" 
+        height="${circleDimensions}" 
+        viewBox="0 0 ${circleDimensions} ${circleDimensions}" 
+        xmlns="http://www.w3.org/2000/svg"
+      >  
+        <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="lightgrey"></stop>
+          <stop offset="100%" stop-color="black"></stop>
+        </linearGradient>
+
+        <circle 
+          class="outer-circle" 
+          cx="${circleDimensions / 2}" cy="${circleDimensions / 2}" r="${radius}" 
+          fill="none" 
+          stroke="#EEE"
+          stroke-width="${strokeWidth}"
+        ></circle>
+
+        <circle 
+          id="circle" 
+          class="inner-circle circle-${circle.name.toLowerCase()}" 
+          cx="${circleDimensions / 2}" cy="${circleDimensions / 2}" r="${radius}" 
+          fill="none" 
+          stroke="url(#gradient)" 
+          stroke-linecap="round" 
+          stroke-width="${strokeWidth}" 
+          stroke-dasharray="${circumference} ${circumference}" 
+          stroke-dashoffset="${circumference}"
+        ></circle>
+
+      </svg>
+      <p class="number" data-progress="${circle.number}">${circle.number}</p>
+      <h6 class="mb-1 mt-5">${circle.name}</h6>`;
+    
+    // assign all the attributes/children for the DOM
+    div.innerHTML = markup;
+    div.className = "circle--wrapper";
+    parent.innerHTML = markup;
+    parent.appendChild(frag);
+  })
+}
+
+const animateCircles = () => {
+  techProgress.forEach(circle => {
+    $(`.circle-${circle.name.toLowerCase()}`).attr('stroke-dashoffset', ((2 * Math.PI * 59) * (1 - circle.progress / 100)))
+  })
+
+  $('.number').each(function () {
+    $(this).prop('Counter', 0).animate({
+      Counter: $(this).data('progress')
+    }, {
+        duration: 1400,
+        easing: 'swing',
+        step: function (now) {
+          $(this).text(Math.ceil(now) + '%');
+        }
+      });
+  })
+}
 
 //Animate the progress bars on scroll
-
 $.fn.isInViewport = function() {
   var elementTop = $(this).offset().top;
   var elementBottom = elementTop + $(this).outerHeight();
@@ -18,44 +127,43 @@ $.fn.isInViewport = function() {
 };
 
 $(window).on('resize scroll', function () {
-  $('.df--tech--progress').each(function() {
-    if ($(this).isInViewport()) {
-      const bar = $(this).find('.progress-circle');
-      
-      let current = 0;
-      const percentage = bar.attr('data-percentage') 
+  $('#circle').each(function() {
+    if ($(this).isInViewport()) {        
+      animateCircles();
+    }
+  });
+  
+  $('.animate--first').each(function() {
+    if ($(this).isInViewport()) {         
+      $(this).addClass('animate--first__transform');
+    }
+  });
 
-      const increment = () => {
-        if (current >= percentage) {
-          clearInterval(interval)
-          return;
-        }
-
-        bar.removeClass(`progress-${current}`);
-        current++;
-        bar.addClass(`progress-${current}`)
-      }
-
-      const interval = setInterval(increment, 10);
+  $('.animate--second').each(function() {
+    if ($(this).isInViewport()) {         
+      $(this).addClass('animate--second__transform');
     }
   });
 });
 
 //Smooth scroll from nav
 
-var $root = $('html, body');
+const $root = $('html, body');
 
 $('a[href^="#"]').click(function() {
-    var href = $.attr(this, 'href');
+    const href = $.attr(this, 'href');
 
     $root.animate({
-        scrollTop: $(href).offset().top
-    }, 1000, function () {
-        window.location.hash = href;
-    });
+        scrollTop: $(href).offset().top - 60
+    }, 1500);
 
     return false;
 });
+
+$('.navbar-toggler').click(function() {
+  $('#navbar-toggler').toggleClass('fa-angle-up')
+  $('#navbar-toggler').toggleClass('fa-angle-down')
+})
 
 // Navbar transparency:
 
@@ -64,3 +172,13 @@ window.addEventListener('scroll', function () {
     window.scrollY > window.innerHeight / 2 ? 'add': 'remove'
   ]('scrolled');
 });
+
+$('#scroll').click(function() {
+    $root.animate({
+        scrollTop: $('#tech').offset().top - 60
+    }, 1500);
+
+    return false;
+});
+
+createCircles();
