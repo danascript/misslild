@@ -128,7 +128,7 @@ $.fn.isInViewport = function() {
 
 $(document).ready(function() {
   if (window.innerWidth < 700) {
-    createCircles();
+    // createCircles();
     animateCircles();
     $('.animate--first').addClass('animate--first__transform');
 
